@@ -46,7 +46,7 @@ t
 ,
 1
 ]
-s(t)∈[0,1], evolving from a driver term to the problem Hamiltonian.
+, evolving from a driver term to the problem Hamiltonian.
 The schedule is discretized into a small number of segments (piecewise-constant or piecewise-linear), keeping the parameter count low and optimization stable.
 Multiple annealing paths and random initial states are evaluated in parallel.
 
