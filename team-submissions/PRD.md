@@ -29,7 +29,7 @@
 **Owner:** Project Lead
 
 ### Choice of Quantum Algorithm
-* **Algorithm:** [Identify the specific algorithm or ansatz]
+* **Algorithm:** [Quantum Annealing]
     * *Example:* "Quantum Approximate Optimization Algorithm (QAOA) with a hardware-efficient ansatz."
     * *Example:* "Variational Quantum Eigensolver (VQE) using a custom warm-start initialization."
 
