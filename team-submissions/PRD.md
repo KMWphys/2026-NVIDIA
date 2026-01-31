@@ -17,7 +17,7 @@
 
 | Role | Name | GitHub Handle | Discord Handle
 | :--- | :--- | :--- | :--- |
-| **Project Lead** (Architect) | [Name] | [@handle] | [@handle] |
+| **Project Lead** (Architect) | Kai Ming Wu | KMWphys | wukyle |
 | **GPU Acceleration PIC** (Builder) | [Name] | [@handle] | [@handle] |
 | **Quality Assurance PIC** (Verifier) | [Name] | [@handle] | [@handle] |
 | **Technical Marketing PIC** (Storyteller) | [Name] | [@handle] | [@handle] |
