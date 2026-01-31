@@ -26,11 +26,14 @@
 ---
 
 ## 2. The Architecture
-**Owner:** Project Lead
+**Owner:** Kai Ming Wu
 
 ### Choice of Quantum Algorithm
 * **Algorithm:** [Quantum Annealing]
-    * *Example:* "Quantum Approximate Optimization Algorithm (QAOA) with a hardware-efficient ansatz."
+    * An annealing-based optimization approach, inspired by quantum annealing / adiabatic evolution, implemented as a GPU-accelerated annealing simulation.
+The method targets direct minimization of the objective function 
+Q
+Q, which is formulated as an Ising / QUBO-style energy landscape.
     * *Example:* "Variational Quantum Eigensolver (VQE) using a custom warm-start initialization."
 
 * **Motivation:** [Why this algorithm? Connect it to the problem structure or learning goals.]
