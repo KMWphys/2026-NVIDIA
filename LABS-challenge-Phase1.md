@@ -99,4 +99,8 @@ Finally, define the operational details of your workflow:
 * **Success Metrics:** Define your targets. (e.g., "We are targeting an Approximation Ratio > 0.85 for N=20," or "We aim to reduce the Classical Tabu Search runtime by 50% using CuPy for N>30").
 * **Resource Management:** How will you manage your workflow so that you do not deplete your Brev credits? (e.g., "We'll set an alarm every 30 minutes to check that we don't have any instances running idly in the background." "We will test on an L4 GPU before attempting to run on an A100"). How will you allocate your $20 credit? Create a rough estimate. (e.g., "5 hours of dev on L4 ($5.00) + 4 hours of heavy benchmarking on A100 ($8.00) + Buffer ($4.00).")
 
+---
+## References
 
+* [Scaling advantage with quantum-enhanced memetic tabu search](https://arxiv.org/html/2511.04553v1)
+* [Parallel MTS by JPMorgan Chase](https://arxiv.org/pdf/2504.00987)
