@@ -20,7 +20,7 @@
 | **Project Lead** (Architect) | Kai Ming Wu | KMWphys | wukyle0608 |
 | **GPU Acceleration PIC** (Builder) | Yi Xin Zhan | YI-XIN-Zhan| yudimao |
 | **GPU Acceleration PIC** (Builder) | Hsiang Heng Liu | seanliugo-maker| wau_constant_55914 |
-| **Quality Assurance PIC** (Verifier) | Ming RU Liu | Mingru Yang | liumr1 |
+| **Quality Assurance PIC** (Verifier) | Ming RU Liu | Mingru | liumr1 |
 | **Technical Marketing PIC** (Storyteller) | Ming Chin Ho | DraemiusHo| mcho0208 |
 
 ---
