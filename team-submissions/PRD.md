@@ -18,9 +18,10 @@
 | Role | Name | GitHub Handle | Discord Handle
 | :--- | :--- | :--- | :--- |
 | **Project Lead** (Architect) | Kai Ming Wu | KMWphys | wukyle |
-| **GPU Acceleration PIC** (Builder) | [Name] | [@handle] | [@handle] |
-| **Quality Assurance PIC** (Verifier) | [Name] | [@handle] | [@handle] |
-| **Technical Marketing PIC** (Storyteller) | [Name] | [@handle] | [@handle] |
+| **GPU Acceleration PIC** (Builder) | Yi Xin Zhan | YI-XIN-Zhan| Yi Xin |
+| **GPU Acceleration PIC** (Builder) | Hsiang Heng Liu | seanliugo-maker|  |
+| **Quality Assurance PIC** (Verifier) | Ming RU Liu | Mingru Yang | liumr1 |
+| **Technical Marketing PIC** (Storyteller) | Ming Chin Ho | DraemiusHo| mcho0208 |
 
 ---
 
