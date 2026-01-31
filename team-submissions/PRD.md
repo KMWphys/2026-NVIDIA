@@ -51,9 +51,14 @@ The schedule is discretized into a small number of segments (piecewise-constant 
 Multiple annealing paths and random initial states are evaluated in parallel.
 
 * **Motivation:** [Why this algorithm? Connect it to the problem structure or learning goals.]
-    * *Example (Metric-driven):* "We chose QAOA because we believe the layer depth corresponds well to the correlation length of the LABS sequences."
-    *  Example (Skills-driven):* "We selected VQE to maximize skill transfer. Our senior members want to test a novel 'warm-start' adaptation, while the standard implementation provides an accessible ramp-up for our members new to quantum variational methods."
-   
+    * Problem–Method Alignment:
+The objective 
+Q
+Q naturally defines an energy landscape with many local minima. Annealing-based methods are well suited for exploring such landscapes and escaping local optima.
+    *  GPU Friendliness:
+The core operations of annealing—energy evaluation, local updates, acceptance tests, and replica evolution—are highly parallelizable and map naturally to GPU execution.
+    * Scalability:
+By running thousands of annealing replicas and parameter schedules simultaneously, we trade depth for width, achieving faster time-to-solution through parallel sampling.
 
 ### Literature Review
 * **Reference:** [Title, Author, Link]
