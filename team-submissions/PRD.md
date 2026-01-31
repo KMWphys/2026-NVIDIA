@@ -34,7 +34,7 @@
 The method targets direct minimization of the objective function 
 Q, which is formulated as an Ising / QUBO-style energy landscape.
 
-   Annealing Schedule / Ansatz:
+  * Annealing Schedule / Ansatz:
 We use a parameterized annealing schedule 
 s
 (
