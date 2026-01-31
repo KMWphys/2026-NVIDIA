@@ -32,9 +32,22 @@
 * **Algorithm:** [Quantum Annealing]
     * An annealing-based optimization approach, inspired by quantum annealing / adiabatic evolution, implemented as a GPU-accelerated annealing simulation.
 The method targets direct minimization of the objective function 
-Q
 Q, which is formulated as an Ising / QUBO-style energy landscape.
-    * *Example:* "Variational Quantum Eigensolver (VQE) using a custom warm-start initialization."
+   Annealing Schedule / Ansatz:
+We use a parameterized annealing schedule 
+s
+(
+t
+)
+∈
+[
+0
+,
+1
+]
+s(t)∈[0,1], evolving from a driver term to the problem Hamiltonian.
+The schedule is discretized into a small number of segments (piecewise-constant or piecewise-linear), keeping the parameter count low and optimization stable.
+Multiple annealing paths and random initial states are evaluated in parallel.
 
 * **Motivation:** [Why this algorithm? Connect it to the problem structure or learning goals.]
     * *Example (Metric-driven):* "We chose QAOA because we believe the layer depth corresponds well to the correlation length of the LABS sequences."
