@@ -33,6 +33,7 @@
     * An annealing-based optimization approach, inspired by quantum annealing / adiabatic evolution, implemented as a GPU-accelerated annealing simulation.
 The method targets direct minimization of the objective function 
 Q, which is formulated as an Ising / QUBO-style energy landscape.
+
    Annealing Schedule / Ansatz:
 We use a parameterized annealing schedule 
 s
