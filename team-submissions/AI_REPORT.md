@@ -34,7 +34,7 @@ Instead of blindly trusting AI outputs, it is important to understand the underl
 
 AI-generated code was not always correct and occasionally contained errors. For example, issues arose when generating qubit gate implementations, where the produced code did not fully match the expected behavior. In such cases, we needed to identify the source of the problem and provide clearer, more precise instructions to guide the AI toward a correct solution.
 
-## Context Dump
+#### Context Dump
 
 Below is an example of the context and instructions provided to the AI during development:
 
