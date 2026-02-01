@@ -62,9 +62,7 @@ By running thousands of annealing replicas and parameter schedules simultaneousl
 
 ### Literature Review
 
-Variational Quantum Annealing for Quantum Chemistry
-
-Ka-Wa Yip, Kübra Yeter-Aydeniz, Sijia S. Dong et al.,https://doi.org/10.48550/arXiv.2503.15473 this paper introduce a variational quantum annealing (VarQA) algorithm for electronic structure theory, in which we use the quantum annealer as a sampler and prepare an ansatz state through its statistics. We also introduce a strategy called the "digitizer" for searching the space of variational parameters efficiently. We demonstrate the effectiveness of VarQA by evaluating the ground-state potential energy surface for molecules with up to 20 spin orbitals as well as an excited-state potential energy surface. This approach resembles the workings of the quantum Boltzmann Machines (QBMs), but is generalized to handle distributions beyond the Boltzmann distribution. In VarQA, with the number of required logical qubits equal to the number of spin orbitals, a fully connected Ising Hamiltonian can be readily implemented in a large-scale quantum annealer as a scalable ansatz for electronic structure calculations.
+Variational Quantum Annealing for Quantum Chemistry Ka-Wa Yip, Kübra Yeter-Aydeniz, Sijia S. Dong et al.,https://doi.org/10.48550/arXiv.2503.15473 this paper introduce a variational quantum annealing (VarQA) algorithm for electronic structure theory, in which we use the quantum annealer as a sampler and prepare an ansatz state through its statistics. We also introduce a strategy called the "digitizer" for searching the space of variational parameters efficiently. We demonstrate the effectiveness of VarQA by evaluating the ground-state potential energy surface for molecules with up to 20 spin orbitals as well as an excited-state potential energy surface. This approach resembles the workings of the quantum Boltzmann Machines (QBMs), but is generalized to handle distributions beyond the Boltzmann distribution. In VarQA, with the number of required logical qubits equal to the number of spin orbitals, a fully connected Ising Hamiltonian can be readily implemented in a large-scale quantum annealer as a scalable ansatz for electronic structure calculations.
 
 ---
 
@@ -113,12 +111,11 @@ Parallelization Approach:
 ---
 
 ## 5. Execution Strategy & Success Metrics
-**Owner:** Technical Marketing PIC
+**Owner:** Ming Chin Ho
 
 ### Agentic Workflow
 
 IDE: VS Code
-    * *Example:* "We are using Cursor as the IDE. We have created a `skills.md` file containing the CUDA-Q documentation so the agent doesn't hallucinate API calls. The QA Lead runs the tests, and if they fail, pastes the error log back into the Agent to refactor."
 
 ### Success Metrics
  ＊Metric 1 (Approximation): Obtain Merit Factor F = N² / (2E) > 6.0 for N=40.
