@@ -2,8 +2,7 @@
 
 ### 1. The Workflow
 
-We primarily used **ChatGPT** and **Gemini** as AI assistants throughout the project.  
-Their main roles were to generate example code, help supplement prerequisite knowledge, and assist in drafting descriptive text.
+We primarily used **ChatGPT** and **Gemini** as AI assistants throughout the project, their main roles were to generate example code, help supplement prerequisite knowledge, and assist in drafting descriptive text.
 
 Rather than directly adopting AI-generated outputs, our team was responsible for modifying the generated content, organizing all components into a coherent structure, and carefully reviewing the logic and consistency of the overall implementation. All architectural decisions and final integrations were handled manually to ensure correctness.
 
@@ -13,7 +12,9 @@ This workflow allowed us to leverage AI for efficiency while maintaining full hu
 
 ### 2. Verification Strategy
 
-We validated the AI-generated code by running and testing it locally using VS Code. The code was executed in the intended development environment, where we checked for syntax errors, runtime errors. We also verified that the outputs matched expected results and iteratively fixed any issues identified during execution. This hands-on testing ensured the generated code was functional and reliable.
+We validated the AI-generated code by running and testing it locally using VS Code, the code was executed in the intended development environment, where we checked for syntax errors, runtime errors. 
+
+We also verified that the outputs matched expected results and iteratively fixed any issues identified during execution, this hands-on testing ensured the generated code was functional and reliable.
 
 ---
 
@@ -32,3 +33,5 @@ Instead of blindly trusting AI outputs, it is important to understand the underl
 #### Fail
 
 AI-generated code was not always correct and occasionally contained errors. For example, issues arose when generating qubit gate implementations, where the produced code did not fully match the expected behavior. In such cases, we needed to identify the source of the problem and provide clearer, more precise instructions to guide the AI toward a correct solution.
+
+
