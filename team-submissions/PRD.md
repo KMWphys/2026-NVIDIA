@@ -102,13 +102,10 @@ Parallelization Approach:
 * **AI Hallucination Guardrails:** [How do you know the AI code is right?]
    
 ### Core Correctness Checks
-* **Check 1 (Symmetry):** [Describe a specific physics check]
-    * *Example:* "LABS sequence $S$ and its negation $-S$ must have identical energies. We will assert `energy(S) == energy(-S)`."
-* **Check 2 (Ground Truth):**
-    * *Example:* "For $N=3$, the known optimal energy is 1.0. Our test suite will assert that our GPU kernel returns exactly 1.0 for the sequence `[1, 1, -1]`."
-
----
-
+* **Check 1 
+* **Check 1
+* * **Check 3
+ 
 ## 5. Execution Strategy & Success Metrics
 **Owner:** Ming Chin Ho
 
