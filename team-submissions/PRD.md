@@ -85,27 +85,7 @@ Parallelization Approach:
 
 ### Classical Acceleration (MTS)
 * **Strategy:**
-
-  ＊ The annealing engine is fully GPU-accelerated, with the following components implemented as GPU kernels:
-Energy Evaluation Kernel:
-
-Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
-
-  ＊Batch Neighbor Proposals:
-
-Generates and evaluates many candidate bit flips in parallel, computing 
-Δ
-E
-ΔE using local updates.
-
-  ＊Acceptance and RNG:
-
-Acceptance decisions are computed on-GPU using parallel random number generation, avoiding CPU–GPU synchronization.
-
-  ＊Replica Exchange (Optional):
-
-Parallel tempering is implemented by periodically swapping replicas at different effective temperatures to improve global exploration.
-Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
+   The clssical MTS provided in the totourial is run sequentially. We try to implement it on GPU, which can apply parallel accerating
 * **SHardware Targets:**
 * **Dev Environment:** 
 * **Production Environment:** 
