@@ -86,7 +86,7 @@ Parallelization Approach:
 ### Classical Acceleration (MTS)
 * **Strategy:**
    The clssical MTS provided in the totourial is run sequentially. We try to implement it on GPU, which can apply parallel accerating
-* **SHardware Targets:**
+
 * **Dev Environment:** 
 * **Production Environment:** 
 
