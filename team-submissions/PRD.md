@@ -1,8 +1,8 @@
 # Product Requirements Document (PRD)
 
-**Project Name:** [e.g., LABS-Solv-V1]
-**Team Name:** [e.g., QuantumVibes]
-**GitHub Repository:** [Insert Link Here]
+**Project Name:** Quantum annealing enhance MTS for LABS
+**Team Name:** QQ
+**GitHub Repository:** https://github.com/KMWphys/2026-NVIDIA
 
 ---
 
