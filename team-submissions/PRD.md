@@ -61,8 +61,11 @@ The core operations of annealing—energy evaluation, local updates, acceptance 
 By running thousands of annealing replicas and parameter schedules simultaneously, we trade depth for width, achieving faster time-to-solution through parallel sampling.
 
 ### Literature Review
-* **Reference:** 
-* **Relevance:** 
+
+Variational Quantum Annealing for Quantum Chemistry
+
+Ka-Wa Yip, Kübra Yeter-Aydeniz, Sijia S. Dong et al.,https://doi.org/10.48550/arXiv.2503.15473 this paper introduce a variational quantum annealing (VarQA) algorithm for electronic structure theory, in which we use the quantum annealer as a sampler and prepare an ansatz state through its statistics. We also introduce a strategy called the "digitizer" for searching the space of variational parameters efficiently. We demonstrate the effectiveness of VarQA by evaluating the ground-state potential energy surface for molecules with up to 20 spin orbitals as well as an excited-state potential energy surface. This approach resembles the workings of the quantum Boltzmann Machines (QBMs), but is generalized to handle distributions beyond the Boltzmann distribution. In VarQA, with the number of required logical qubits equal to the number of spin orbitals, a fully connected Ising Hamiltonian can be readily implemented in a large-scale quantum annealer as a scalable ansatz for electronic structure calculations.
+
 ---
 
 ## 3. The Acceleration Strategy
