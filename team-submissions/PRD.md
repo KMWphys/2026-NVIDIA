@@ -86,10 +86,29 @@ Parallelization Approach:
  *Replica-based parallelism: Run independent replicas to estimate success probabilities and best-energy distributions.
 
 ### Classical Acceleration (MTS)
-* **Strategy:** [The classical search has many opportuntities for GPU acceleration. What will you chose to do?]
-    * *Example:* "The standard MTS evaluates neighbors one by one. We will use `cupy` to rewrite the energy function to evaluate a batch of 1,000 neighbor flips simultaneously on the GPU."
+* **Strategy:**
 
-### Hardware Targets
+＊ The annealing engine is fully GPU-accelerated, with the following components implemented as GPU kernels:
+Energy Evaluation Kernel:
+
+Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
+
+＊Batch Neighbor Proposals:
+
+Generates and evaluates many candidate bit flips in parallel, computing 
+Δ
+E
+ΔE using local updates.
+
+＊Acceptance and RNG:
+
+Acceptance decisions are computed on-GPU using parallel random number generation, avoiding CPU–GPU synchronization.
+
+＊Replica Exchange (Optional):
+
+Parallel tempering is implemented by periodically swapping replicas at different effective temperatures to improve global exploration.
+Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
+
 * **Dev Environment:** [e.g., Qbraid (CPU) for logic, Brev L4 for initial GPU testing]
 * **Production Environment:** [e.g., Brev A100-80GB for final N=50 benchmarks]
 
