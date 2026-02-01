@@ -134,6 +134,6 @@ Plot 2: Convergence Rate (Energy vs Iteration) for Quantum vs Random vs Classica
 ## 6. Resource Management Plan
 **Owner:** GPU Acceleration PIC 
 
-* **Plan:** [How will you avoid burning all your credits?]
-    * *Example:* "We will develop entirely on Qbraid (CPU) until the unit tests pass. We will then spin up a cheap L4 instance on Brev for porting. We will only spin up the expensive A100 instance for the final 2 hours of benchmarking."
-    * *Example:* "The GPU Acceleration PIC is responsible for manually shutting down the Brev instance whenever the team takes a meal break."
+* **Plan:** 
+    * All development will be conducted on Qbraid using CPU resources until all unit tests pass. Brev will be used only for proof-of-concept validation, after which final benchmarking will be performed on local hardware.
+The GPU Acceleration PIC is responsible for manually shutting down the Brev instance whenever the team is not actively working.
