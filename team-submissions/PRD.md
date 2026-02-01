@@ -119,8 +119,11 @@ IDE: VS Code
 
 ### Success Metrics
  ＊Metric 1 (Approximation): Obtain Merit Factor F = N² / (2E) > 6.0 for N=40.
+ 
  ＊Metric 2 (Speedup): Achieve 10× speedup for classical MTS.
+ 
  ＊Metric 3 (Scalability): Successfully execute GQE-MTS for N =35,40,45.
+ 
  ＊Metric 4 (Quantum Advantage): Ｑuantum seed demonstrates advantages over random initialization.
 
 ### Visualization Plan
