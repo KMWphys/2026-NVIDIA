@@ -102,10 +102,12 @@ Parallelization Approach:
 
    
 ### Core Correctness Checks
-* **Check 1 
-* **Check 1
-* * **Check 3
- 
+
+* Check the table in the references: T. Packebusch and S. Mertens, "Low autocorrelation binary sequences",
+Journal of Physics A: Mathematical and Theoretical.
+49, 165001 (2016).
+
+
 ## 5. Execution Strategy & Success Metrics
 **Owner:** Ming Chin Ho
 
