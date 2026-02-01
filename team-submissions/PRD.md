@@ -87,6 +87,7 @@ Parallelization Approach:
 * **Strategy:**
    The clssical MTS provided in the totourial is run sequentially. We try to implement it on GPU, which can apply parallel accerating
 
+### Hardware Targets
 * **Dev Environment:**  Qbraid (CPU) for logic, Brev L4 for initial GPU testing.
 * **Production Environment:** 4 nodes with 8x H100-80GB GPUs per node for final N=38 benchmarks.
 
