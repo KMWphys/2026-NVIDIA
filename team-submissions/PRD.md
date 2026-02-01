@@ -66,7 +66,7 @@ By running thousands of annealing replicas and parameter schedules simultaneousl
 ---
 
 ## 3. The Acceleration Strategy
-**Owner:** Mingru 
+**Owner:** YI-XIN-Zhan| Hsiang Heng Liu
 
 ### Quantum Acceleration (CUDA-Q)
 * **Strategy:** CUDA-Q is used to support and validate annealing-inspired quantum workflows and simulations:
@@ -113,7 +113,7 @@ Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced
 ---
 
 ## 4. The Verification Plan
-**Owner:** Quality Assurance PIC
+**Owner:** Ming RU Liu
 
 ### Unit Testing Strategy
 * **Framework:** [e.g., `pytest`, `unittest`]
