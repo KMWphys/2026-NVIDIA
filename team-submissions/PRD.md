@@ -61,10 +61,8 @@ The core operations of annealing—energy evaluation, local updates, acceptance 
 By running thousands of annealing replicas and parameter schedules simultaneously, we trade depth for width, achieving faster time-to-solution through parallel sampling.
 
 ### Literature Review
-* **Reference:** [Title, Author, Link]
-* **Relevance:** [How does this paper support your plan?]
-    * *Example:* "Reference: 'QAOA for MaxCut.' Relevance: Although LABS is different from MaxCut, this paper demonstrates how parameter concentration can speed up optimization, which we hope to replicate."
-
+* **Reference:** 
+* **Relevance:** 
 ---
 
 ## 3. The Acceleration Strategy
