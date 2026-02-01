@@ -81,36 +81,36 @@ Parallelization Approach:
 
  *Multi-seed parallelism: Evaluate many random initial states simultaneously.
  
- *Multi-schedule parallelism: Test multiple annealing schedules in parallel.
+  *Multi-schedule parallelism: Test multiple annealing schedules in parallel.
  
- *Replica-based parallelism: Run independent replicas to estimate success probabilities and best-energy distributions.
+  *Replica-based parallelism: Run independent replicas to estimate success probabilities and best-energy distributions.
 
 ### Classical Acceleration (MTS)
 * **Strategy:**
 
-＊ The annealing engine is fully GPU-accelerated, with the following components implemented as GPU kernels:
+  ＊ The annealing engine is fully GPU-accelerated, with the following components implemented as GPU kernels:
 Energy Evaluation Kernel:
 
 Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
 
-＊Batch Neighbor Proposals:
+  ＊Batch Neighbor Proposals:
 
 Generates and evaluates many candidate bit flips in parallel, computing 
 Δ
 E
 ΔE using local updates.
 
-＊Acceptance and RNG:
+  ＊Acceptance and RNG:
 
 Acceptance decisions are computed on-GPU using parallel random number generation, avoiding CPU–GPU synchronization.
 
-＊Replica Exchange (Optional):
+  ＊Replica Exchange (Optional):
 
 Parallel tempering is implemented by periodically swapping replicas at different effective temperatures to improve global exploration.
 Computes the Ising/QUBO energy efficiently using vectorized and memory-coalesced operations.
-
-* **Dev Environment:** [e.g., Qbraid (CPU) for logic, Brev L4 for initial GPU testing]
-* **Production Environment:** [e.g., Brev A100-80GB for final N=50 benchmarks]
+* **SHardware Targets:**
+* **Dev Environment:** 
+* **Production Environment:** 
 
 ---
 
