@@ -53,7 +53,7 @@ Multiple annealing paths and random initial states are evaluated in parallel.
 * **Motivation:** 
     * Problem–Method Alignment:
 The objective 
-Q
+
 Q naturally defines an energy landscape with many local minima. Annealing-based methods are well suited for exploring such landscapes and escaping local optima.
     *  GPU Friendliness:
 The core operations of annealing—energy evaluation, local updates, acceptance tests, and replica evolution—are highly parallelizable and map naturally to GPU execution.
