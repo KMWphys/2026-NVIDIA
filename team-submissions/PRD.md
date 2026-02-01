@@ -68,13 +68,16 @@ By running thousands of annealing replicas and parameter schedules simultaneousl
 ---
 
 ## 3. The Acceleration Strategy
-**Owner:** GPU Acceleration PIC
+**Owner:** Mingru 
 
 ### Quantum Acceleration (CUDA-Q)
-* **Strategy:** [How will you use the GPU for the quantum part?]
-    * *Example:* "After testing with a single L4, we will target the `nvidia-mgpu` backend to distribute the circuit simulation across multiple L4s for large $N$."
- 
-
+* **Strategy:** CUDA-Q is used to support and validate annealing-inspired quantum workflows and simulations:
+  *For digitized annealing, CUDA-Q executes parameterized circuits corresponding to discretized annealing steps, evaluated in batch across multiple schedules and seeds.
+    *For annealing simulations, CUDA-Q is used to validate small-scale quantum-inspired evolution and benchmark against classical annealing results.
+Parallelization Approach:
+ *Multi-seed parallelism: Evaluate many random initial states simultaneously.
+ *Multi-schedule parallelism: Test multiple annealing schedules in parallel.
+ *Replica-based parallelism: Run independent replicas to estimate success probabilities and best-energy distributions.
 ### Classical Acceleration (MTS)
 * **Strategy:** [The classical search has many opportuntities for GPU acceleration. What will you chose to do?]
     * *Example:* "The standard MTS evaluates neighbors one by one. We will use `cupy` to rewrite the energy function to evaluate a batch of 1,000 neighbor flips simultaneously on the GPU."
