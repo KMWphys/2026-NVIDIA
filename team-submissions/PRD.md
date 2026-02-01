@@ -103,10 +103,13 @@ Parallelization Approach:
    
 ### Core Correctness Checks
 
-* Check the table in the references: T. Packebusch and S. Mertens, "Low autocorrelation binary sequences",
+** Check 1 (Exact energy)
+The table in the references: T. Packebusch and S. Mertens, "Low autocorrelation binary sequences",
 Journal of Physics A: Mathematical and Theoretical.
 49, 165001 (2016).
-
+Test N = 10, the energy E = 13 etc.
+** Check 2 (blocks in equation B3)
+We print the circuit of two qubits rotations and four qubits rotations to make sure the decompsition of the circuit is valid.
 
 ## 5. Execution Strategy & Success Metrics
 **Owner:** Ming Chin Ho
