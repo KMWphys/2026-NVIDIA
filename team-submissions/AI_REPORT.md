@@ -34,4 +34,12 @@ Instead of blindly trusting AI outputs, it is important to understand the underl
 
 AI-generated code was not always correct and occasionally contained errors. For example, issues arose when generating qubit gate implementations, where the produced code did not fully match the expected behavior. In such cases, we needed to identify the source of the problem and provide clearer, more precise instructions to guide the AI toward a correct solution.
 
+## Context Dump
+
+Below is an example of the context and instructions provided to the AI during development:
+
+> "Let me verify the case. I use quantum annealing to generate a bitstring, i.e., an eigenstate of the Ising Hamiltonian, and repeat this procedure several times to create a population for performing MTS. Then we execute MTS to obtain the final result.  
+> The overall algorithm for solving the LABS problem is hybrid: the quantum part is used to generate the population, which is then processed by classical MTS."
+
+This description was provided to guide AI understanding of the workflow and to ensure that generated code and explanations aligned with the intended hybrid quantum-classical approach.
 
