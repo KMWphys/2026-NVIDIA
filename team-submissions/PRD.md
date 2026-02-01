@@ -29,7 +29,7 @@
 **Owner:** Kai Ming Wu
 
 ### Choice of Quantum Algorithm
-* **Algorithm:** [Quantum Annealing]
+* **Algorithm:** Quantum Annealing
     * An annealing-based optimization approach, inspired by quantum annealing / adiabatic evolution, implemented as a GPU-accelerated annealing simulation.
 The method targets direct minimization of the objective function 
 Q, which is formulated as an Ising / QUBO-style energy landscape.
@@ -50,7 +50,7 @@ t
 The schedule is discretized into a small number of segments (piecewise-constant or piecewise-linear), keeping the parameter count low and optimization stable.
 Multiple annealing paths and random initial states are evaluated in parallel.
 
-* **Motivation:** [Why this algorithm? Connect it to the problem structure or learning goals.]
+* **Motivation:** 
     * Problem–Method Alignment:
 The objective 
 Q
