@@ -1,6 +1,6 @@
 ## AI-Assisted Workflow, Verification, and Reflection
 
-### 1. Workflow
+### 1. The Workflow
 
 We primarily used **ChatGPT** and **Gemini** as AI assistants throughout the project.  
 Their main roles were to generate example code, help supplement prerequisite knowledge, and assist in drafting descriptive text.
@@ -17,7 +17,7 @@ We validated the AI-generated code by running and testing it locally using VS Co
 
 ---
 
-### 3. Reflection (Win / Learn / Fail)
+### 3. The "Vibe" Log
 
 #### Win
 
