@@ -134,8 +134,11 @@ IDE: VS Code
  ＊Metric 4 (Quantum Advantage): Ｑuantum seed demonstrates advantages over random initialization.
 
 ### Visualization Plan
-*Plot 1: Solution Time as a Function of Problem Size (N) Across CPU and GPU Architectures.
+
+Plot 1: Solution Time as a Function of Problem Size (N) Across CPU and GPU Architectures.
+
 Plot 2: Convergence Rate (Energy vs Iteration) for Quantum vs Random vs Classical.
+
 ---
 
 ## 6. Resource Management Plan
