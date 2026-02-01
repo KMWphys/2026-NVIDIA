@@ -1,142 +1,34 @@
-# labs_energy.py
-from typing import List
-from dataclasses import dataclass
+## AI-Assisted Workflow, Verification, and Reflection
 
-def bits01_to_pm1(bits):
-    # 0 -> +1, 1 -> -1
-    return [1 if b == 0 else -1 for b in bits]
+### 1. Workflow
 
-def labs_energy_pm1(s: List[int]) -> int:
-    """
-    LABS energy:
-        E = sum_{k=1}^{N-1} (sum_i s_i s_{i+k})^2
-    """
-    n = len(s)
-    E = 0
-    for k in range(1, n):
-        ck = 0
-        for i in range(n - k):
-            ck += s[i] * s[i + k]
-        E += ck * ck
-    return E
+We primarily used **ChatGPT** and **Gemini** as AI assistants throughout the project.  
+Their main roles were to generate example code, help supplement prerequisite knowledge, and assist in drafting descriptive text.
 
-@dataclass
-class PauliTerm:
-    word: str     # e.g. "IZZIZ"
-    coeff: float
+Rather than directly adopting AI-generated outputs, our team was responsible for modifying the generated content, organizing all components into a coherent structure, and carefully reviewing the logic and consistency of the overall implementation. All architectural decisions and final integrations were handled manually to ensure correctness.
 
-def labs_ising_terms_Z(N: int):
-    """
-    Generate Z-only Ising terms whose minimum matches LABS minimum
-    (constant offsets ignored).
-    """
-    terms = []
+This workflow allowed us to leverage AI for efficiency while maintaining full human control over the system design and logical validity.
 
-    for k in range(1, N):
-        pairs = [(i, i + k) for i in range(N - k)]
-        for a in range(len(pairs)):
-            for b in range(a + 1, len(pairs)):
-                i1, i2 = pairs[a]
-                j1, j2 = pairs[b]
-                word = ["I"] * N
-                for idx in (i1, i2, j1, j2):
-                    word[idx] = "Z"
-                terms.append(PauliTerm("".join(word), 2.0))
+---
 
-    return terms
-# qa_anneal.py
-import cudaq
-from labs_energy import bits01_to_pm1, labs_energy_pm1
+### 2. Verification Strategy
 
-@cudaq.kernel
-def qa_anneal_kernel(
-    num_qubits: int,
-    terms_words: list[str],
-    terms_coeffs: list[float],
-    total_time: float,
-    steps: int
-):
-    q = cudaq.qvector(num_qubits)
+We validated the AI-generated code by running and testing it locally using VS Code. The code was executed in the intended development environment, where we checked for syntax errors, runtime errors. We also verified that the outputs matched expected results and iteratively fixed any issues identified during execution. This hands-on testing ensured the generated code was functional and reliable.
 
-    # |+>^N
-    for i in range(num_qubits):
-        h(q[i])
+---
 
-    dt = total_time / steps
+### 3. Reflection (Win / Learn / Fail)
 
-    for m in range(steps):
-        s = (m + 1) / steps
-        A = 1.0 - s
-        B = s
+#### Win
 
-        # Mixer: exp(-i A sum X)
-        theta_x = 2.0 * dt * A
-        for i in range(num_qubits):
-            rx(theta_x, q[i])
+Objectively, it would have been difficult to independently complete the full code implementation within a single day.  
+In this regard, AI provided substantial assistance by offering initial code structures and examples, which significantly reduced development time. This allowed us to focus more on refining the logic and integrating the system rather than starting entirely from scratch.
 
-        # Problem: exp(-i B H_Ising)
-        for j in range(len(terms_words)):
-            angle = -dt * B * terms_coeffs[j]
+#### Learn
 
-            pauli_ops = []
-            for idx, p in enumerate(terms_words[j]):
-                if p == "Z":
-                    pauli_ops.append(("Z", q[idx]))
+Through this process, we learned that effectively using AI-generated content requires skill and critical thinking.  
+Instead of blindly trusting AI outputs, it is important to understand the underlying logic and structure of the generated solutions. Actively analyzing and adapting AI suggestions proved to be far more effective than passive acceptance.
 
-            if pauli_ops:
-                exp_pauli(angle, pauli_ops)
+#### Fail
 
-def sample_anneal_best(
-    N,
-    terms,
-    shots=500,
-    total_time=1.0,
-    steps=30,
-    target="qpp"
-):
-    cudaq.set_target(target)
-
-    words = [t.word for t in terms]
-    coeffs = [t.coeff for t in terms]
-
-    counts = cudaq.sample(
-        qa_anneal_kernel,
-        N,
-        words,
-        coeffs,
-        total_time,
-        steps,
-        shots_count=shots
-    )
-
-    best_E = None
-    best_b = None
-
-    for bitstring, cnt in counts.items():
-        bits = [int(b) for b in bitstring]
-        s = bits01_to_pm1(bits)
-        E = labs_energy_pm1(s)
-
-        if best_E is None or E < best_E:
-            best_E = E
-            best_b = bitstring
-
-    return best_b, best_E
-# test_run.py
-from labs_energy import labs_ising_terms_Z
-from qa_anneal import sample_anneal_best
-
-N = 6
-terms = labs_ising_terms_Z(N)
-
-best_bitstring, best_energy = sample_anneal_best(
-    N,
-    terms,
-    shots=500,
-    total_time=1.0,
-    steps=30,
-    target="qpp"
-)
-
-print("Best bitstring:", best_bitstring)
-print("LABS energy:", best_energy)
+AI-generated code was not always correct and occasionally contained errors. For example, issues arose when generating qubit gate implementations, where the produced code did not fully match the expected behavior. In such cases, we needed to identify the source of the problem and provide clearer, more precise instructions to guide the AI toward a correct solution.
