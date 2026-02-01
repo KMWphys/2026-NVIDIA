@@ -100,8 +100,7 @@ Parallelization Approach:
 ### Unit Testing Strategy
 * **Framework:** [e.g., `pytest`, `unittest`]
 * **AI Hallucination Guardrails:** [How do you know the AI code is right?]
-    * *Example:* "We will require AI-generated kernels to pass a 'property test' (Hypothesis library) ensuring outputs are always within theoretical energy bounds before they are integrated."
-
+   
 ### Core Correctness Checks
 * **Check 1 (Symmetry):** [Describe a specific physics check]
     * *Example:* "LABS sequence $S$ and its negation $-S$ must have identical energies. We will assert `energy(S) == energy(-S)`."
