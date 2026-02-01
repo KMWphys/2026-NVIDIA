@@ -98,8 +98,8 @@ Parallelization Approach:
 **Owner:** Ming RU Liu
 
 ### Unit Testing Strategy
-* **Framework:** [e.g., `pytest`, `unittest`]
-* **AI Hallucination Guardrails:** [How do you know the AI code is right?]
+* **Framework:** ruff, mypy
+
    
 ### Core Correctness Checks
 * **Check 1 
